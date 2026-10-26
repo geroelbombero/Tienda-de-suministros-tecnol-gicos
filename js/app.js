@@ -124,17 +124,11 @@ function finalizarOperacion(resultado, mensajeExito) {
   }
 }
 
-function generarIdPedido() {
-  const parteTiempo = Date.now().toString(36).toUpperCase();
-  const parteAleatoria = Math.random().toString(36).slice(2, 6).toUpperCase();
-  return `TS-${parteTiempo}-${parteAleatoria}`;
-}
 
-function renderizarConfirmacionPedido(idPedido, lineas, resumen) {
+function renderizarConfirmacionPedido( lineas, resumen) {
   elementos.confirmacionPedido.textContent = "";
   const caja = crearElemento("div", "caja-pedido");
-  caja.append(crearElemento("h3", "", "Pedido confirmado (simulación)"));
-  caja.append(crearElemento("p", "", `Identificador del pedido: ${idPedido}`));
+  caja.append(crearElemento("h3", "", "Pedido confirmado"));
 
   const lista = crearElemento("ul");
 
@@ -148,13 +142,8 @@ function renderizarConfirmacionPedido(idPedido, lineas, resumen) {
   caja.append(crearElemento("p", "", `Subtotal: ${formatearCOP(resumen.subtotal)}`));
   caja.append(crearElemento("p", "", `Descuento: ${formatearCOP(resumen.descuento)}`));
   caja.append(crearElemento("p", "", `Total: ${formatearCOP(resumen.total)}`));
-  caja.append(
-    crearElemento(
-      "p",
-      "",
-      "Esta confirmación es una simulación local. No se realizó ningún pago real ni se actualizó el inventario."
-    )
-  );
+  caja.append("p", "", "Pedido registrado existosamente, vuelva pronto!")
+  ;
   elementos.confirmacionPedido.append(caja);
 }
 
@@ -173,15 +162,13 @@ function confirmarPedido() {
 
   const lineas = carrito.obtenerLineasDetalladas();
   const resumen = carrito.obtenerResumen();
-  const idPedido = generarIdPedido();
 
-  renderizarConfirmacionPedido(idPedido, lineas, resumen);
+  renderizarConfirmacionPedido( lineas, resumen);
   carrito.vaciar();
   persistirCarrito();
   renderizarCarrito();
   mostrarAviso(
-    `Pedido ${idPedido} confirmado en simulación local. No se realizó ningún pago real ni se modificó el inventario.`,
-    "exito"
+    "exito, Pedido registrado exitosamente, vuelva pronto!"
   );
 }
 
