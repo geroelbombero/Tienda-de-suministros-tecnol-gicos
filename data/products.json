@@ -1,0 +1,110 @@
+[
+    {
+  "id": 101,
+  "name": "Teclado mecánico",
+  "category": "Perifericos",
+  "price": 189900,
+  "stock": 8,
+  "description": "Teclado USB para uso diario",
+  "active": true
+    },
+    {
+  "id": 102,
+  "name": "Mouse",
+  "category": "Perifericos",
+  "price": 190900,
+  "stock": 15,
+  "description": "Mouse USB para uso diario",
+  "active": true
+    },
+    {
+  "id": 103,
+  "name": "Microfono",
+  "category": "Perifericos",
+  "price": 200000,
+  "stock": 3,
+  "description": "Microfono USB para uso diario",
+  "active": true
+    },
+    {
+  "id": 104,
+  "name": "Teclado No Mecanico",
+  "category": "Perifericos",
+  "price": 150900,
+  "stock": 7,
+  "description": "Teclado USB no mecanico para uso diario",
+  "active": true
+    },
+    {
+  "id": 105,
+  "name": "Silla Gamer",
+  "category": "Accesorios",
+  "price": 400900,
+  "stock": 7,
+  "description": "silla comoda para uso diario",
+  "active": true
+    },
+    {
+  "id": 106,
+  "name": "Mando Inalambrico",
+  "category": "Accesorios",
+  "price": 120000,
+  "stock": 4,
+  "description": "Mando Inalambrico para uso diario",
+  "active": true
+    },
+    {
+  "id": 107,
+  "name": "Ps5",
+  "category": "Accesorios",
+  "price": 500900,
+  "stock": 15,
+  "description": "Consola virtual para uso diario",
+  "active": true
+    },
+    {
+  "id": 108,
+  "name": "Xbox 360",
+  "category": "Accesorios",
+  "price": 70000,
+  "stock": 3,
+  "description": "Consola virtual para uso diario",
+  "active": true
+    },
+    {
+  "id": 109,
+  "name": "cable HDMI",
+  "category": "Suministros",
+  "price": 19900,
+  "stock": 20,
+  "description": "Cable HDMI para uso diario",
+  "active": true
+    },
+    {
+  "id": 110,
+  "name": "Luces Led",
+  "category": "Suministros",
+  "price": 59900,
+  "stock": 13,
+  "description": "Luces led USB para uso diario",
+  "active": true
+    },
+    {
+  "id": 111,
+  "name": "Pilas AA",
+  "category": "Suministros",
+  "price": 10000,
+  "stock": 12,
+  "description": "Pilas AA ahorradoras para uso diario",
+  "active": true
+    },
+    {
+  "id": 112,
+  "name": "Cable USB tipo C",
+  "category": "Suministros",
+  "price": 5000,
+  "stock": 5,
+  "description": "Cable USB tipo C para uso diario",
+  "active": true
+    }
+]
