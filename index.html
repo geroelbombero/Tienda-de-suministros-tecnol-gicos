@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoMundo | inicio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="encabezado-sitio">
+    <h1>TecnoMundo</h1>
+    <p class="insignia-carrito">Unidades en el carrito: <span id="contadorCarrito">0</span></p>
+  </header>
+
+  <main class="disposicion">
+    <div id="avisoGeneral" class="aviso" role="status" aria-live="polite" hidden></div>
+
+    <section class="panel filtros" aria-labelledby="tituloFiltros">
+      <h2 id="tituloFiltros">Buscar y filtrar</h2>
+      <form id="formularioFiltros">
+        <fieldset id="grupoFiltros">
+          <legend class="ocultar-visual">Filtros del catálogo</legend>
+          <div class="campo">
+            <label for="campoBusqueda">Buscar por nombre o descripción</label>
+            <input id="campoBusqueda" type="search" placeholder="Ej: teclado">
+          </div>
+          <div class="campo">
+            <label for="selectorCategoria">Categoría</label>
+            <select id="selectorCategoria">
+              <option value="todas">Todas las categorías</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="selectorOrden">Ordenar por precio</label>
+            <select id="selectorOrden">
+              <option value="ninguno">Sin ordenar</option>
+              <option value="asc">Menor a mayor</option>
+              <option value="desc">Mayor a menor</option>
+            </select>
+          </div>
+          <div class="campo campo-casilla">
+            <input id="soloDisponibles" type="checkbox">
+            <label for="soloDisponibles">Mostrar solo productos disponibles</label>
+          </div>
+          <button id="botonLimpiarFiltros" class="boton" type="button">Limpiar filtros</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <div class="columnas">
+      <section class="panel catalogo" aria-labelledby="tituloCatalogo">
+        <h2 id="tituloCatalogo">Catálogo</h2>
+        <p id="estadoCatalogo" class="estado-catalogo" role="status" aria-live="polite"></p>
+        <button id="botonReintentar" class="boton" type="button" hidden>Reintentar carga</button>
+        <product-list id="listaProductos"></product-list>
+      </section>
+
+      <aside class="lateral">
+        <section class="panel" aria-labelledby="tituloCarrito">
+          <h2 id="tituloCarrito">Carrito</h2>
+          <shopping-cart id="carritoCompras"></shopping-cart>
+        </section>
+
+        <section class="panel" aria-labelledby="tituloPedido">
+          <h2 id="tituloPedido">Resumen del pedido</h2>
+          <button id="botonConfirmar" class="boton boton-primario" type="button">Confirmar pedido</button>
+          <div id="confirmacionPedido" class="confirmacion-pedido" aria-live="polite"></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
